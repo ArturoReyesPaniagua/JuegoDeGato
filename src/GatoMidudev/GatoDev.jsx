@@ -3,11 +3,11 @@ import confetti from 'canvas-confetti'
 
 import { Square } from './components/Square.jsx'
 import { TURNS } from './constants.js'
-import { checkWinnerFrom, checkEndGame } from './logic/board.js'
-import { WinnerModal } from './components/WinnerModal.jsx'
-import { saveGameToStorage, resetGameStorage } from './logic/storage/index.js'
+import {checkEndGame, checkWinnerFrom}  from "./logic/board.js"
+import {WinnerModal } from  "./components/WinnerModal.jsx"
+import { saveGameToStorage, resetGameStorage } from './logic/storege/index.js'
 
-function App () {
+function Gatodev  () {
   const [board, setBoard] = useState(() => {
     const boardFromStorage = window.localStorage.getItem('board')
     if (boardFromStorage) return JSON.parse(boardFromStorage)
@@ -90,4 +90,4 @@ function App () {
   )
 }
 
-export default App
+export default Gatodev 
